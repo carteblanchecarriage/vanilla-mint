@@ -4,7 +4,9 @@ const connect = async () => {
     try {
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
     } catch (e) {
-        document.getElementById('error-message').innerHTML = ('There was an error when trying to connect a wallet, make sure you have a wallet ready', e)
+        const errorMessage = document.getElementById('error-message')
+        errorMessage.innerHTML = `There was an error when trying to connect a wallet, make sure you have a wallet ready. \n${e}`;
+        errorMessage.classList.toggle('invisible')
     }
     console.log(accounts[0]);
     document.querySelector('#account').innerHTML = `Welcome user: ${accounts[0]}`;
