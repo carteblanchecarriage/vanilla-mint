@@ -1,7 +1,11 @@
 // user ethers to connect to the network
 
 const connect = async () => {
-    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+    try {
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' })
+    } catch (e) {
+        document.getElementById('error-message').innerHTML = ('There was an error when trying to connect a wallet, make sure you have a wallet ready', e)
+    }
     console.log(accounts[0]);
     document.querySelector('#account').innerHTML = `Welcome user: ${accounts[0]}`;
 }
