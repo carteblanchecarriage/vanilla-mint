@@ -14,7 +14,8 @@
     <div class="flex flex-col items-center mt-6">
         <h1 class="text-6xl">Let's Connect a Wallet</h1>
         <button onclick="connect()" class="w-20 bg-yellow-400 p-3 rounded-lg hover:bg-yellow-300 mt-6">Connect</button>
-        <button onclick="mint()" class="w-20 bg-green-400 p-3 rounded-lg hover:bg-green-300 mt-6">Mint</button>
+        <button id="mint-btn" onclick="mint()" class="w-20 bg-green-400 p-3 rounded-lg hover:bg-green-300 mt-6"
+            disabled>Mint</button>
         <p id="account"></p>
         <p id="error-message" class="m-6 bg-red-100 text-red-600 p-6 invisible"></p>
     </div>
