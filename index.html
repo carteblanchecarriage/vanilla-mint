@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="flex flex-col items-center mt-6">
+        <h1 class="text-6xl">Let's Connect a Wallet</h1>
+        <button onclick="connect()" class="w-20 bg-yellow-400 p-3 rounded-lg hover:bg-yellow-300 mt-6">Connect</button>
+        <button onclick="mint()" class="w-20 bg-green-400 p-3 rounded-lg hover:bg-green-300 mt-6">Mint</button>
+        <p id="account"></p>
+    </div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="abi.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
